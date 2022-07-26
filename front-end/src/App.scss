@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    //color: white;
+}
+
+.wrapper {
+    display: flex;
+}
+
+.wrapper-left {
+    width: 17%;
+    height: 100vh;
+    background-color: #222;
+    position: fixed;
+}
+
+.wrapper-right {
+    width: 83%;
+    background-color: #151515;
+
+    padding-top: 60px;
+    font-family: 'Roboto';
+    color: white;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-left: 17%;
+    min-height: 100vh;
+}
+
+.sidebar-container {
+    position: fixed;
+}

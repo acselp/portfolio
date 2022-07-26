@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "react-loaders": "^3.0.1",
+    "react-router-dom": "^6.3.0",
+    "sass": "^1.53.0"
+  }
+}
