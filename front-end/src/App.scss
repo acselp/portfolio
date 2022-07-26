@@ -35,6 +35,12 @@
     position: fixed;
 }
 
+.menu {
+    &:first-child {
+
+    }
+}
+
 .theme-menu {
     background-color: #222;
     border-style: solid;
@@ -49,6 +55,9 @@
     position: absolute;
     right: 20px;
     top: 60px;
+
+    transition: all .5s;
+
 }
 
 .theme-menu-text {
@@ -69,4 +78,36 @@
 
         cursor: pointer;
     }
+}
+
+.round-btn {
+    padding: 10px;
+    border-radius: 50px;
+    background-color: #222;
+    border-style: solid;
+    border-color: #333;
+
+    position: absolute;
+    right: 250px;
+    top: 57px;
+
+    color: white;
+    font-size: 18pt;
+
+    transition: all .5s;
+
+    & svg {
+        transition: all .5s;
+    }
+
+    cursor: pointer;
+
+    &:hover svg{
+        
+        transform: rotateZ(90deg);
+    }
+}
+
+.rbtn-2 {
+    top: 128px !important;
 }

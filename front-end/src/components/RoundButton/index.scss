@@ -1,16 +1,18 @@
 .round-btn {
-    padding: 15px;
+    padding: 10px;
     border-radius: 50px;
     background-color: #222;
     border-style: solid;
     border-color: #333;
 
     position: absolute;
-    right: 25px;
-    top: 25px;
+    right: 250px;
+    top: 57px;
 
     color: white;
     font-size: 18pt;
+
+    transition: all .5s;
 
     & svg {
         transition: all .5s;
