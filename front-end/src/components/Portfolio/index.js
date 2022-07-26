@@ -2,10 +2,10 @@ import PageTitle from "../PageTitle";
 import "./index.scss";
 
 
-function Portfolio() {
+function Portfolio(props) {
     return (
         <>
-            <PageTitle title="Portfolio" />
+            <PageTitle title="Portfolio" themeColor={props.themeColor} />
         </>
     );
 }

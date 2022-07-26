@@ -2,10 +2,10 @@ import PageTitle from "../PageTitle";
 import "./index.scss";
 
 
-function Contact() {
+function Contact(props) {
     return (
         <div className="contact">
-            <PageTitle title="Contact" />
+            <PageTitle title="Contact" themeColor={ props.themeColor } />
         </div>
     );
 }

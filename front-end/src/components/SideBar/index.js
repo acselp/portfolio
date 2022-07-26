@@ -2,28 +2,29 @@ import "./index.scss";
 import { NavLink, Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouse, faUser, faList, faBriefcase, faMessage, faCode } from "@fortawesome/free-solid-svg-icons";
-import { ThemeColor } from "../../colors";
 import styled from "styled-components";
 
 
-const StyledUl = styled.ul`
-    & li > a:hover {
-        color: ${ThemeColor};
-    }
-`
 
 
-function SideBar() {
+function SideBar(props) {
+
+
+    const StyledUl = styled.ul`
+        & li > a:hover {
+            color: ${props.themeColor};
+        }
+    `
 
     let activeStyle = {
-        color: ThemeColor
+        color: props.themeColor
     }
 
     return (
         <>  
             <div className="logo">
                 <Link to="/">
-                    <FontAwesomeIcon icon={ faCode } color={ ThemeColor } size="5x" />
+                    <FontAwesomeIcon icon={ faCode } color={ props.themeColor } size="5x" />
                 </Link>
             </div>
             <div className="sidebar">

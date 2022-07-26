@@ -2,10 +2,10 @@ import PageTitle from "../PageTitle";
 import "./index.scss";
 
 
-function About() {
+function About(props) {
     return (
         <>
-            <PageTitle title="About" />
+            <PageTitle title="About" themeColor={ props.themeColor } />
 
             <div className="about-text">
                 <h1>
