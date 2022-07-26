@@ -2,19 +2,21 @@ import "./index.scss";
 import { NavLink, Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouse, faUser, faList, faBriefcase, faMessage, faCode } from "@fortawesome/free-solid-svg-icons";
+import { ThemeColor } from "../../colors";
+
 
 
 function SideBar() {
 
     let activeStyle = {
-        color: "#FD670E"
+        color: ThemeColor
     }
 
     return (
         <>  
             <div className="logo">
                 <Link to="/">
-                    <FontAwesomeIcon icon={ faCode } color="#FD670E" size="5x" />
+                    <FontAwesomeIcon icon={ faCode } color={ ThemeColor } size="5x" />
                 </Link>
             </div>
             <div className="sidebar">
