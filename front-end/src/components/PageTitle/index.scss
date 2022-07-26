@@ -1,0 +1,31 @@
+.page-title-h1 {
+    font-size: 45pt;
+    position: relative;
+    margin-bottom: 100px;
+
+//--------------------
+
+    &::after {
+        position: absolute;
+        top: 95%;
+        left: 4px;
+        content: "";
+        display: block;
+        background-color: #FD670E;
+        height: 5px;
+        width: 80px;
+        //border-radius: 50px;
+    }
+
+    &::before {
+        position: absolute;
+        top: 110%;
+        left: 4px;
+        content: "";
+        display: block;
+        background-color: #FD670E;
+        height: 5px;
+        width: 40px;
+        //border-radius: 50px;
+    }
+}
