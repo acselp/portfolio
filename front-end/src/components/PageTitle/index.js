@@ -1,11 +1,22 @@
 import "./index.scss";
 import { ThemeColor } from "../../colors";
+import styled from "styled-components";
+
+const StyledH1 = styled.h1`
+    &:after {
+        background-color: ${ThemeColor}
+    }
+    
+    &:before {
+        background-color: ${ThemeColor}
+    }
+`
 
 function PageTitle(props) {
     return (
-        <h1 className="page-title-h1" style={{ color: ThemeColor }}>
+        <StyledH1 className="page-title-h1">
             { props.title }
-        </h1>
+        </StyledH1>
     );
 }
 

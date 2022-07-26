@@ -3,7 +3,14 @@ import { NavLink, Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouse, faUser, faList, faBriefcase, faMessage, faCode } from "@fortawesome/free-solid-svg-icons";
 import { ThemeColor } from "../../colors";
+import styled from "styled-components";
 
+
+const StyledUl = styled.ul`
+    & li > a:hover {
+        color: ${ThemeColor};
+    }
+`
 
 
 function SideBar() {
@@ -20,13 +27,13 @@ function SideBar() {
                 </Link>
             </div>
             <div className="sidebar">
-                <ul>
+                <StyledUl>
                     <li><NavLink to="/" style={({ isActive }) => isActive ? activeStyle : undefined}><FontAwesomeIcon icon={ faHouse } /><span>Home</span></NavLink></li>
                     <li><NavLink to="/about" style={({ isActive }) => isActive ? activeStyle : undefined} ><FontAwesomeIcon icon={faUser} /><span>About</span></NavLink></li>
                     <li><NavLink to="/skills" style={({ isActive }) => isActive ? activeStyle : undefined}><FontAwesomeIcon icon={faList} /><span>Skills</span></NavLink></li>
                     <li><NavLink to="/portfolio" style={({ isActive }) => isActive ? activeStyle : undefined}><FontAwesomeIcon icon={faBriefcase} /><span>Portfolio</span></NavLink></li>
                     <li><NavLink to="/contact" style={({ isActive }) => isActive ? activeStyle : undefined}><FontAwesomeIcon icon={faMessage} /><span>Contact</span></NavLink></li>
-                </ul>
+                </StyledUl>
             </div>
         </>
         

@@ -2,6 +2,7 @@ import "./index.scss";
 import ImageMan from "./img/happy_man.jpg";
 import PageTitle from "../PageTitle/index";
 import { Link } from "react-router-dom";
+import { ThemeColor } from "../../colors";
 
 function Home() {
     return (
@@ -11,13 +12,13 @@ function Home() {
             
             <div className="home-div">
                 <div className="home-text">
-                    <h1>Hy, my name is <span className="author-name">Virgiliu Plesca</span></h1>
+                    <h1>Hy, my name is <span className="author-name" style={{color: ThemeColor}}>Virgiliu Plesca</span></h1>
                     <h1>I am a Web Developer</h1>
                     <p>
                         I have been a web developer for nearly 1 year. Blah blah blah sjdgnksdjgfn safjgn nd ndjfn jndfn skkfe,i mskm fjn djs 'sdf ' sdf sadfsdf'f dsf ajsndfjndsv
                     </p>
 
-                    <Link to="/about" className="home-more-link">
+                    <Link to="/about" className="home-more-link" style={{backgroundColor: ThemeColor}}>
                         <nobr>More About Me</nobr>
                     </Link>
                 </div>
