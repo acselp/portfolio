@@ -14,6 +14,9 @@ function SideBar(props) {
         & li > a:hover {
             color: ${props.themeColor};
         }
+        & li > a {
+            color: ${props.themeMode.text};
+        }
     `
 
     let activeStyle = {

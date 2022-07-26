@@ -9,12 +9,13 @@ import About from './components/About';
 import Skills from './components/Skills';
 import Portfolio from './components/Portfolio';
 
-import { Colors } from './colors';
+import { Colors, OtherColors } from './colors';
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { faCog } from '@fortawesome/free-solid-svg-icons';
 import { faMoon } from '@fortawesome/free-solid-svg-icons';
+import { faSun } from '@fortawesome/free-solid-svg-icons';
 
 
 const MyRoutes = function(props) {
@@ -33,19 +34,15 @@ const MyRoutes = function(props) {
 function App() {
 
 
-  const [menuStyle, setMenuStyle] = useState ({
-    right: "-100%"
-  }); 
-
-  const [btnsStyle, setBtnsStyle] = useState ({
-    right: "50px"
-  })
-
+  const [themeMode, setThemeMode] = useState(OtherColors.dark);
+  const [menuStyle, setMenuStyle] = useState ({ right: "-100%" }); 
+  const [btnsStyle, setBtnsStyle] = useState ({ right: "50px" })
   const [visible, setVisible] = useState(false);
-
   const [themeColor, setThemeColor] = useState(Colors.orange);
+  const [isDark, setIsDark] = useState(true);
+  const [themeModeIcon, setThemeModeIcon] = useState(faSun);
 
-
+  
   const toggleThemeMenu = () => {
 
     if (visible) {
@@ -61,6 +58,21 @@ function App() {
   }
 
 
+  const toggleDarkTheme = () => {
+    if(isDark) {
+      setIsDark(false);
+      setThemeMode(OtherColors.light);
+      setThemeModeIcon(faMoon);
+    }
+    else {
+      setIsDark(true);
+      setThemeMode(OtherColors.dark);
+      setThemeModeIcon(faSun);
+
+    }
+  }
+
+
   const changeThemeColor = (color) => {
     setThemeColor(color);
   }
@@ -68,26 +80,26 @@ function App() {
   return (
     <BrowserRouter>
       <div className="wrapper">
-        <div className="wrapper-left">
-          <SideBar themeColor={ themeColor } />
+        <div className="wrapper-left" style={{ color: themeMode.text, backgroundColor: themeMode.sidebar }}>
+          <SideBar themeColor={ themeColor } themeMode={ themeMode } />
         </div>
 
-        <div className="wrapper-right">
-          <MyRoutes themeColor={ themeColor } />
+        <div className="wrapper-right" style={{ color: themeMode.text, backgroundColor: themeMode.right }}>
+          <MyRoutes themeColor={ themeColor } themeMode={ themeMode } />
         </div>
 
 
         <div className="menu" >
 
-          <div className="round-btn" style={ btnsStyle } onClick={ toggleThemeMenu }>
+          <div className="round-btn" style={ Object.assign({ color: themeMode.text, backgroundColor: themeMode.sidebar }, btnsStyle) } onClick={ toggleThemeMenu }>
               <FontAwesomeIcon icon={ faCog } />
           </div>
 
-          <div className="round-btn rbtn-2" style={ btnsStyle }>
-              <FontAwesomeIcon icon={ faMoon } />
+          <div className="round-btn rbtn-2" style={ Object.assign({ color: themeMode.text, backgroundColor: themeMode.sidebar }, btnsStyle)} onClick={ toggleDarkTheme }>
+              <FontAwesomeIcon icon={ themeModeIcon } />
           </div>
 
-          <div className="theme-menu" style={ menuStyle }>
+          <div className="theme-menu" style={ Object.assign({ color: themeMode.text, backgroundColor: themeMode.sidebar }, menuStyle) }>
             <div className="theme-menu-text">
               Theme colors
             </div>
