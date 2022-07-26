@@ -34,3 +34,39 @@
 .sidebar-container {
     position: fixed;
 }
+
+.theme-menu {
+    background-color: #222;
+    border-style: solid;
+    border-color: #333;
+    border-radius: 5px;
+
+    color: white;
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 15pt;
+
+    position: absolute;
+    right: 20px;
+    top: 60px;
+}
+
+.theme-menu-text {
+    padding: 18px;
+}
+
+.theme-menu-colors {
+    display: flex;
+    padding: 18px;
+    padding-top: 0;
+
+
+    & > div {
+        padding: 18px;
+        background-color: #fff;
+        border-radius: 50px;
+        margin-right: 5px;
+
+        cursor: pointer;
+    }
+}

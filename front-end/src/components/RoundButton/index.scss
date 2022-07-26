@@ -1,0 +1,25 @@
+.round-btn {
+    padding: 15px;
+    border-radius: 50px;
+    background-color: #222;
+    border-style: solid;
+    border-color: #333;
+
+    position: absolute;
+    right: 25px;
+    top: 25px;
+
+    color: white;
+    font-size: 18pt;
+
+    & svg {
+        transition: all .5s;
+    }
+
+    cursor: pointer;
+
+    &:hover svg{
+        
+        transform: rotateZ(90deg);
+    }
+}
