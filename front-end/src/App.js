@@ -29,9 +29,7 @@ function App() {
     <BrowserRouter>
       <div className="wrapper">
         <div className="wrapper-left">
-          {/* <div className='sidebar-container'> */}
-            <SideBar />
-          {/* </div> */}
+          <SideBar />
         </div>
 
         <div className="wrapper-right">
