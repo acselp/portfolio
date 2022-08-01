@@ -1,10 +1,24 @@
 import "./index.scss";
+import styled from "styled-components";
+
+
 
 function PageTitle(props) {
+
+    const StyledH1 = styled.h1`
+        &:after {
+            background-color: ${props.themeColor};
+        }
+        
+        &:before {
+            background-color: ${props.themeColor};
+        }
+    `
+
     return (
-        <h1 className="page-title-h1">
+        <StyledH1 className="page-title-h1">
             { props.title }
-        </h1>
+        </StyledH1>
     );
 }
 

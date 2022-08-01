@@ -2,10 +2,10 @@ import PageTitle from "../PageTitle";
 import "./index.scss";
 
 
-function Skills() {
+function Skills(props) {
     return (
         <>
-            <PageTitle title="Skills" />
+            <PageTitle title="Skills" themeColor={ props.themeColor } />
         </>
     );
 }
