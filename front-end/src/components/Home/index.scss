@@ -4,6 +4,14 @@ h1 {
     font-weight: 700;
 }
 
+
+.home-text {
+    & > p {
+        line-height: 1.5em;
+        font-size: 13pt;
+    }
+}
+
 .home-div {
     display: flex;
     justify-content: space-between;
