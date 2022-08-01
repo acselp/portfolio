@@ -40,7 +40,7 @@ function App() {
   const [visible, setVisible] = useState(false);
   const [themeColor, setThemeColor] = useState(Colors.orange);
   const [isDark, setIsDark] = useState(true);
-  const [themeModeIcon, setThemeModeIcon] = useState(faSun);
+  const [themeModeIcon, setThemeModeIcon] = useState(faMoon);
 
   
   const toggleThemeMenu = () => {
@@ -62,12 +62,12 @@ function App() {
     if(isDark) {
       setIsDark(false);
       setThemeMode(OtherColors.light);
-      setThemeModeIcon(faMoon);
+      setThemeModeIcon(faSun);
     }
     else {
       setIsDark(true);
       setThemeMode(OtherColors.dark);
-      setThemeModeIcon(faSun);
+      setThemeModeIcon(faMoon);
 
     }
   }
