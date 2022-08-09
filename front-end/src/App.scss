@@ -41,11 +41,9 @@ body {
     position: fixed;
 }
 
-.menu {
-    &:first-child {
-
-    }
-}
+// .menu {
+//     position: relative;
+// }
 
 .theme-menu {
     background-color: #222;
@@ -58,7 +56,7 @@ body {
     font-weight: 700;
     font-size: 15pt;
 
-    position: absolute;
+    position: fixed;
     right: 20px;
     top: 60px;
 
@@ -93,7 +91,7 @@ body {
     border-style: solid;
     border-color: #333;
 
-    position: absolute;
+    position: fixed;
     right: 250px;
     top: 57px;
 
