@@ -8,6 +8,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import About from './components/About';
 import Skills from './components/Skills';
 import Portfolio from './components/Portfolio';
+import PDFViewier from './components/PDFViewier';
 
 import { Colors, OtherColors } from './colors';
 import { useState } from 'react';
@@ -26,6 +27,9 @@ const MyRoutes = function(props) {
         <Route path="/about" element={ <About themeColor={ props.themeColor }/> }/>
         <Route path="/skills" element={ <Skills themeColor={ props.themeColor }/> }/>
         <Route path="/portfolio" element={ <Portfolio themeColor={ props.themeColor }/> }/>
+
+        <Route path="/cv-pdf" element={ <PDFViewier /> }/>
+
     </Routes>
   );
 }

@@ -1,8 +1,12 @@
 import PageTitle from "../PageTitle";
 import InfoCell from "../InfoCell";
-import ProgressBar from "../ProgressBar";
+// import ProgressBar from "../ProgressBar"
+import { Link } from "react-router-dom";
+// import Hexagon from "./Hexagon/index"
+
 
 import "./index.scss";
+import LanguageLevel from "../LanguageLevel";
 
 
 function About(props) {
@@ -40,8 +44,7 @@ function About(props) {
                 </div>
 
                 <div className="cv-section-right">
-                    <ProgressBar />
-
+                    <LanguageLevel />
                 </div>
             </div>
         </>
