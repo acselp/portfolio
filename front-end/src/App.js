@@ -84,7 +84,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="wrapper">
-        <div className="wrapper-left" style={{ color: themeMode.text, backgroundColor: themeMode.sidebar }}>
+        <div className="wrapper-left" style={{ color: themeMode.text, backgroundColor: themeMode.sidebar, borderRight: `${ themeMode.border } 2px solid` }}>
           <SideBar themeColor={ themeColor } themeMode={ themeMode } />
         </div>
 

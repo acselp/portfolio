@@ -44,7 +44,7 @@ function About(props) {
                 </div>
 
                 <div className="cv-section-right">
-                    <LanguageLevel />
+                    <LanguageLevel level="A1" />
                 </div>
             </div>
         </>

@@ -17,6 +17,10 @@ function SideBar(props) {
         & li > a {
             color: ${props.themeMode.text};
         }
+        & li::after {
+            background-color: ${props.themeMode.border};
+            transition: all 1s;
+        }
     `
 
     let activeStyle = {
