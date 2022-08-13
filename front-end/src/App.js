@@ -17,6 +17,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCog } from '@fortawesome/free-solid-svg-icons';
 import { faMoon } from '@fortawesome/free-solid-svg-icons';
 import { faSun } from '@fortawesome/free-solid-svg-icons';
+import file from "./files/CV_Plesca_Virgiliu.pdf";
 
 
 const MyRoutes = function(props) {
@@ -28,7 +29,7 @@ const MyRoutes = function(props) {
         <Route path="/skills" element={ <Skills themeColor={ props.themeColor }/> }/>
         <Route path="/portfolio" element={ <Portfolio themeColor={ props.themeColor }/> }/>
 
-        <Route path="/cv-pdf" element={ <PDFViewier /> }/>
+        <Route path="/pdf-viewier" element={ <PDFViewier file={file}/> }/>
 
     </Routes>
   );

@@ -52,6 +52,9 @@ function About(props) {
                     ]} />
                     
                 </div>
+
+                <div className="cv-document" style={{width:"100%", height: "660px"}}>
+                </div>
             </div>
         </>
     );

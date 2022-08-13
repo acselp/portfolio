@@ -4,9 +4,7 @@ export default function PDFViewier(props) {
 
     return (
         <div className="pdf-viewier">
-        
-            <iframe src="./files/CV.pd"></iframe>
-        
+            <embed src={props.file} type="application/pdf"></embed>        
         </div>
     );
 }
