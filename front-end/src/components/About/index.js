@@ -3,6 +3,7 @@ import InfoCell from "../InfoCell";
 // import ProgressBar from "../ProgressBar"
 import { Link } from "react-router-dom";
 // import Hexagon from "./Hexagon/index"
+import Languages from "../Languages";
 
 
 import "./index.scss";
@@ -44,7 +45,12 @@ function About(props) {
                 </div>
 
                 <div className="cv-section-right">
-                    <LanguageLevel level="A1" />
+                    <Languages languages={[
+                        <LanguageLevel title="Romainian" level="C2" level_title="Native C2"/>,
+                        <LanguageLevel title="English" level="B1" level_title="Intermediate B1" />,
+                        <LanguageLevel title="Russian" level="C1" level_title="Advanced C1" />,
+                    ]} />
+                    
                 </div>
             </div>
         </>

@@ -11,78 +11,98 @@ export default function LanguageLevel(props) {
                       [1,1,1,1,1,0],
                       [1,1,1,1,1,1]];
 
-    const statusDefault = ["active-circle", "inactive-circle"];
-
+    const statusDefault = ["inactive-circle", "active-circle"];
+    const levelTitle = ['Elementery', 'Pre intermediate', 'Intermediate', 'Upper intermediate', 'Advanced', 'Native'];
 
 
 
     function MapCircles(props) {
-
         switch(props.level) {
             case 'A1': {
-                circStatus[0].map((circStatus) => {
+                return circStatus[0].map((circStat) => {
                     return (
-                        <div className={"circle " + statusDefault[circStatus]}></div>
+                        <div className={"circle " + statusDefault[circStat]}></div>
                     );
                 });
-                break;
             }
 
             case 'A2': {
-                circStatus[1].map((circStatus) => {
+                return circStatus[1].map((circStat) => {
                     return (
-                        <div className={"circle " + statusDefault[circStatus]}></div>
+                        <div className={"circle " + statusDefault[circStat]}></div>
                     );
                 });
-                break;
             }
 
             case 'B1': {
-                circStatus[2].map((circStatus) => {
+                return circStatus[2].map((circStat) => {
                     return (
-                        <div className={"circle " + statusDefault[circStatus]}></div>
+                        <div className={"circle " + statusDefault[circStat]}></div>
                     );
                 });
-                break;
             }
 
             case 'B2': {
-                circStatus[3].map((circStatus) => {
+                return circStatus[3].map((circStat) => {
                     return (
-                        <div className={"circle " + statusDefault[circStatus]}></div>
+                        <div className={"circle " + statusDefault[circStat]}></div>
                     );
                 });
-                break;
             }
 
             case 'C1': {
-                circStatus[4].map((circStatus) => {
+                return circStatus[4].map((circStat) => {
                     return (
-                        <div className={"circle " + statusDefault[circStatus]}></div>
+                        <div className={"circle " + statusDefault[circStat]}></div>
                     );
                 });
-                break;
             }
 
             case 'C2': {
-                circStatus[5].map((circStatus) => {
+                return circStatus[5].map((circStat) => {
                     return (
-                        <div className={"circle " + statusDefault[circStatus]}></div>
+                        <div className={"circle " + statusDefault[circStat]}></div>
                     );
                 });
-                break;
             }
         }
     }
 
-
+    function LevelTitle(props) {
+        switch(props.level) {
+            case 'A1': 
+                return levelTitle[0];
+            case 'A2':
+                return levelTitle[1];
+            case 'B1': 
+                return levelTitle[2];
+            case 'B2': 
+                return levelTitle[3];
+            case 'C1': 
+                return levelTitle[4];
+            case 'C2':
+                return levelTitle[5];
+        }
+    }
     
 
     return (
         <div className="level-container">
 
-            <MapCircles level={props.level} />
+            {/* <MapCircles level={props.level} /> */}
 
+            <div className="level-text">
+                <div className="language-title">
+                    {props.title}
+                </div>
+                <div className="level-title">
+                    <LevelTitle level={props.level} /> {" " + props.level}
+                </div>
+            </div>
+
+            <div className="circles">
+                <MapCircles level={props.level} />
+            </div>
         </div>
     );
 }
