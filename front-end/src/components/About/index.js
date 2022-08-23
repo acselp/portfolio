@@ -1,16 +1,25 @@
 import PageTitle from "../PageTitle";
 import InfoCell from "../InfoCell";
+import cv_file from "../../files/CV_Plesca_Virgiliu.pdf";
 // import ProgressBar from "../ProgressBar"
 import { Link } from "react-router-dom";
 // import Hexagon from "./Hexagon/index"
 import Languages from "../Languages";
+import styled from "styled-components";
+import Experience from "../Experience";
 
 
 import "./index.scss";
 import LanguageLevel from "../LanguageLevel";
-
+import EducationElem from "../EducationElem";
+import ExperienceElem from "../ExperienceElem";
 
 function About(props) {
+
+    const StyledA = styled.a`
+        background-color: ${props.themeColor};
+    `
+
     return (
         <>
             <PageTitle title="About" themeColor={ props.themeColor } />
@@ -39,21 +48,45 @@ function About(props) {
                     <InfoCell title="Phone" content="+373 672 08 737"/>
                     <InfoCell title="Freelance" content="Available"/>
                     <InfoCell title="City" content="Chisinau"/>
-
+                    
 
 
                 </div>
 
                 <div className="cv-section-right">
                     <Languages languages={[
-                        <LanguageLevel title="Romainian" level="C2" level_title="Native C2"/>,
-                        <LanguageLevel title="English" level="B1" level_title="Intermediate B1" />,
-                        <LanguageLevel title="Russian" level="C1" level_title="Advanced C1" />,
+                        <LanguageLevel themeColor={props.themeColor} title="Romainian" level="C2" level_title="Native C2"/>,
+                        <LanguageLevel themeColor={props.themeColor} title="English" level="B1" level_title="Intermediate B1" />,
+                        <LanguageLevel themeColor={props.themeColor} title="Russian" level="C1" level_title="Advanced C1" />,
                     ]} />
                     
                 </div>
+            </div>
 
-                <div className="cv-document" style={{width:"100%", height: "660px"}}>
+
+            <div className="cv-download-section">
+                <div className="cv-download">
+                    <StyledA href={cv_file} className="about-btns" download>
+                        Download CV
+                    </StyledA>
+                    
+                    <StyledA href="#" className="about-btns">
+                        Hire me
+                    </StyledA>
+                </div>
+            </div>
+
+            <div className="education-experience-container">
+                <div className="education-container">
+                    <Experience title="Education" positions={[
+                        <EducationElem title="Bacalaureat diploma" years="2020" text="Just the school years." />,
+                        <EducationElem title="Informatica Aplicata, FCIM, TUM" years="2020 - 2023" text="Informatics" />
+                    ]} />
+                </div>
+                <div className="experience-container">
+                    <Experience title="Work experience" positions={[
+                        <ExperienceElem title="PHP developer" years="11.2021 - 02.2022" company="Studio WEB Master" text="Just the school years." />,
+                    ]} />
                 </div>
             </div>
         </>

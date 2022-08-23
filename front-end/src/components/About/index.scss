@@ -27,3 +27,26 @@
 .cv-section {
     display: flex;
 }
+
+.about-btns {
+    text-decoration: none;
+    color: white;
+    background-color: orange;
+    padding: 15px 25px 15px 25px;
+    border-radius: 50px;
+    margin-right: 20px;
+}
+
+.cv-download {
+    margin-top: -46px;
+}
+
+.education-experience-container {
+    display: flex;
+    & > * {
+        width: 44.4%;
+        border-radius: 15px;
+        margin-top: 40px;
+        margin-right: 20px;
+    }
+}

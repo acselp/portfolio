@@ -1,8 +1,18 @@
-import Hexagon from "react-hexagon";
 import "./index.scss";
 
+import styled from "styled-components";
 
 export default function LanguageLevel(props) {
+
+
+    const StyledDiv = styled.div`
+        &.active-circle {
+            background-color: ${props.themeColor};
+        } 
+        &.inactive-circle {
+            background-color: #ddd;
+        } 
+    `
 
     let circStatus = [[1,0,0,0,0,0],
                       [1,1,0,0,0,0],
@@ -21,7 +31,7 @@ export default function LanguageLevel(props) {
             case 'A1': {
                 return circStatus[0].map((circStat) => {
                     return (
-                        <div className={"circle " + statusDefault[circStat]}></div>
+                        <StyledDiv className={"circle " + statusDefault[circStat]}></StyledDiv>
                     );
                 });
             }
@@ -29,7 +39,7 @@ export default function LanguageLevel(props) {
             case 'A2': {
                 return circStatus[1].map((circStat) => {
                     return (
-                        <div className={"circle " + statusDefault[circStat]}></div>
+                        <StyledDiv className={"circle " + statusDefault[circStat]}></StyledDiv>
                     );
                 });
             }
@@ -37,7 +47,7 @@ export default function LanguageLevel(props) {
             case 'B1': {
                 return circStatus[2].map((circStat) => {
                     return (
-                        <div className={"circle " + statusDefault[circStat]}></div>
+                        <StyledDiv className={"circle " + statusDefault[circStat]}></StyledDiv>
                     );
                 });
             }
@@ -45,7 +55,7 @@ export default function LanguageLevel(props) {
             case 'B2': {
                 return circStatus[3].map((circStat) => {
                     return (
-                        <div className={"circle " + statusDefault[circStat]}></div>
+                        <StyledDiv className={"circle " + statusDefault[circStat]}></StyledDiv>
                     );
                 });
             }
@@ -53,7 +63,7 @@ export default function LanguageLevel(props) {
             case 'C1': {
                 return circStatus[4].map((circStat) => {
                     return (
-                        <div className={"circle " + statusDefault[circStat]}></div>
+                        <StyledDiv className={"circle " + statusDefault[circStat]}></StyledDiv>
                     );
                 });
             }
@@ -61,7 +71,7 @@ export default function LanguageLevel(props) {
             case 'C2': {
                 return circStatus[5].map((circStat) => {
                     return (
-                        <div className={"circle " + statusDefault[circStat]}></div>
+                        <StyledDiv className={"circle " + statusDefault[circStat]}></StyledDiv>
                     );
                 });
             }
