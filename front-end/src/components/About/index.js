@@ -78,14 +78,14 @@ function About(props) {
 
             <div className="education-experience-container">
                 <div className="education-container">
-                    <Experience title="Education" positions={[
-                        <EducationElem title="Bacalaureat diploma" years="2020" text="Just the school years." />,
-                        <EducationElem title="Informatica Aplicata, FCIM, TUM" years="2020 - 2023" text="Informatics" />
+                    <Experience themeColor={props.themeColor} title="Education" positions={[
+                        <EducationElem themeColor={props.themeColor} title="Bacalaureat diploma" years="2020" text="Just the school years." />,
+                        <EducationElem themeColor={props.themeColor} title="Informatica Aplicata, FCIM, TUM" years="2020 - 2023" text="Informatics" />,
                     ]} />
                 </div>
                 <div className="experience-container">
                     <Experience title="Work experience" positions={[
-                        <ExperienceElem title="PHP developer" years="11.2021 - 02.2022" company="Studio WEB Master" text="Just the school years." />,
+                        <ExperienceElem themeColor={props.themeColor} title="PHP developer" years="11.2021 - 02.2022" company="Studio WEB Master" text="Just the school years." />,
                     ]} />
                 </div>
             </div>
