@@ -1,0 +1,11 @@
+.exp-elem-title {
+    margin: 10px 0 10px 0;
+    font-size: larger;
+    font-weight: 700;
+}
+
+.years {
+    & svg {
+        margin-right: 5px;
+    }
+}

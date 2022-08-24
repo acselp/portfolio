@@ -8,6 +8,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import About from './components/About';
 import Skills from './components/Skills';
 import Portfolio from './components/Portfolio';
+import PDFViewier from './components/PDFViewier';
 
 import { Colors, OtherColors } from './colors';
 import { useState } from 'react';
@@ -16,6 +17,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCog } from '@fortawesome/free-solid-svg-icons';
 import { faMoon } from '@fortawesome/free-solid-svg-icons';
 import { faSun } from '@fortawesome/free-solid-svg-icons';
+import file from "./files/CV_Plesca_Virgiliu.pdf";
 
 
 const MyRoutes = function(props) {
@@ -26,6 +28,9 @@ const MyRoutes = function(props) {
         <Route path="/about" element={ <About themeColor={ props.themeColor }/> }/>
         <Route path="/skills" element={ <Skills themeColor={ props.themeColor }/> }/>
         <Route path="/portfolio" element={ <Portfolio themeColor={ props.themeColor }/> }/>
+
+        <Route path="/pdf-viewier" element={ <PDFViewier file={file}/> }/>
+
     </Routes>
   );
 }
@@ -80,7 +85,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="wrapper">
-        <div className="wrapper-left" style={{ color: themeMode.text, backgroundColor: themeMode.sidebar }}>
+        <div className="wrapper-left" style={{ color: themeMode.text, backgroundColor: themeMode.sidebar, borderRight: `${ themeMode.border } 2px solid` }}>
           <SideBar themeColor={ themeColor } themeMode={ themeMode } />
         </div>
 

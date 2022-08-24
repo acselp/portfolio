@@ -9,3 +9,45 @@
         font-size: 13pt;
     }
 }
+
+.mb-about {
+    margin-bottom: 50px;
+}
+
+.cv-section-left {
+    width: 60%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.cv-section-right {
+    width: 30%;
+}
+
+.cv-section {
+    display: flex;
+}
+
+.about-btns {
+    text-decoration: none;
+    color: white;
+    padding: 15px 25px 15px 25px;
+    border-radius: 50px;
+    margin-right: 20px;
+}
+
+.cv-download {
+    margin-top: -46px;
+}
+
+.education-experience-container {
+    display: flex;
+    & > * {
+        width: 44.4%;
+        border-radius: 15px;
+        margin-top: 40px;
+        margin-right: 20px;
+    }
+
+    margin-bottom: 40px;
+}

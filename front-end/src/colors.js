@@ -9,11 +9,13 @@ export const OtherColors = {
     light: {
         sidebar: "#fdfaff",
         right: "#f3f4fc",
-        text: "#222"
+        text: "#222",
+        border: "#cfcfcf"
     },
     dark: {
         sidebar: "#222",
         right: "#151515",
-        text: "white"
+        text: "white",
+        border: "#4a4a4a"
     }
 }

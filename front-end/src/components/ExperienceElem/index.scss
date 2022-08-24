@@ -1,0 +1,45 @@
+.exp-elem {
+    margin: 30px 0 30px 30px;
+    position: relative;
+    &:first-child {
+        margin-top: 5px;
+    }
+
+    &:last-child {
+        margin-bottom: 5px;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 11px;
+        height: 11px;
+        border-radius: 100%;
+        left: -27px;
+        top: 5px;
+    }
+    &:not(:last-child)::before {
+        content: "";
+        position: absolute;
+        width: 5px;
+        height: calc(100% + 30px);
+        left: -24px;
+        top: 7px;
+    }
+
+    &:last-child::before {
+        content: "";
+        position: absolute;
+        width: 5px;
+        height: 90%;
+        left: -24px;
+        top: 7px;
+    }
+}
+
+.main-blok {
+    background-color: #222;
+    border: 2px #333 solid;
+    border-radius: 20px;
+    padding: 20px;
+}
